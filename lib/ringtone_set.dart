@@ -44,8 +44,8 @@ class RingtoneSet {
   }
 
   /// Sets notification from network URL.
-  static Future<bool> setNotificationFromNetwork(String url) async {
-    return setFromNetwork(url: url, action: 'setNotification');
+  static Future<bool> setNotificationFromNetwork(String url,String fileName) async {
+    return setFromNetwork(url: url, action: 'setNotification',fileName:fileName);
   }
 
   /// Sets notification from file.
@@ -59,8 +59,8 @@ class RingtoneSet {
   }
 
   /// Sets alarm from network URL.
-  static Future<bool> setAlarmFromNetwork(String url) async {
-    return setFromNetwork(url: url, action: 'setAlarm');
+  static Future<bool> setAlarmFromNetwork(String url,String fileName) async {
+    return setFromNetwork(url: url, action: 'setAlarm',fileName:fileName);
   }
 
   /// Sets alarm from file.
