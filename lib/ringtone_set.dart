@@ -29,8 +29,8 @@ class RingtoneSet {
   }
 
   /// Sets ringtone from network URL.
-  static Future<bool> setRingtoneFromNetwork(String url) async {
-    return setFromNetwork(url: url, action: 'setRingtone');
+  static Future<bool> setRingtoneFromNetwork(String url,String fileName) async {
+    return setFromNetwork(url: url, action: 'setRingtone',fileName:fileName);
   }
 
   /// Sets ringtone from file.
