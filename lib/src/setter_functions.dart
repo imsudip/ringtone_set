@@ -29,8 +29,9 @@ Future<bool> setFromAsset({
 Future<bool> setFromNetwork({
   required String url,
   required String action,
+  required String fileName,
 }) async {
-  final path = '${(await getTemporaryDirectory()).path}/${url.split('/').last}';
+  final path = '${(await getTemporaryDirectory()).path}/$fileName.mp3';
   final file = File(path);
   final response = await http.get(Uri.parse(url));
   if (response.statusCode == 200) {
